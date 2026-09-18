@@ -232,14 +232,4 @@ Por meio dos sensores, o sistema consegue coletar informações do ambiente e ap
 
  Alimentação por bateria
 
-📄 Licença
 
-Este projeto não possui uma licença especificada atualmente.
-
-👨‍💻 Autor
-
-kaduzeraaa32
-
-🔗 Repositório
-
-{"fallbackMarkdown":"GitHub — MeasureClimate","reference":{"matched_text":"","prefix":null,"start_idx":5262,"end_idx":5338,"safe_urls":[],"refs":[],"alt":"GitHub — MeasureClimate","prompt_text":"GitHub — MeasureClimate","type":"url","logo":null,"title":"GitHub — MeasureClimate","layout":null,"item":{"title":"GitHub — MeasureClimate","url":"https://github.com/kaduzeraaa32/MeasureClimate?utm_source=chatgpt.com","attribution":"github.com","pub_date":null,"snippet":null,"attribution_segments":null,"supporting_websites":null,"refs":[],"hue":null,"attributions":null}},"showLoginRequiredCard":false}
