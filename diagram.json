@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "author": "you",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard", "id": "bb1", "top": -20, "left": -20, "attrs": {} },
+    {
+      "type": "wokwi-esp32-devkit-v1",
+      "id": "esp",
+      "top": -25.7,
+      "left": 34,
+      "rotate": 270,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht1",
+      "top": 218.7,
+      "left": 25.2,
+      "rotate": 180,
+      "attrs": {}
+    },
+    {
+      "type": "board-bmp180",
+      "id": "bmp1",
+      "top": 268.64,
+      "left": 119.74,
+      "rotate": 270,
+      "attrs": {}
+    },
+    {
+      "type": "board-ssd1306",
+      "id": "oled1",
+      "top": 233.54,
+      "left": 374.63,
+      "attrs": { "i2cAddress": "0x3c" }
+    },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr1",
+      "top": 256.1,
+      "left": 484.3,
+      "rotate": 270,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 187.2,
+      "left": 37.85,
+      "rotate": 90,
+      "attrs": { "value": "10000" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    [ "esp:3V3", "bb1:bp.1", "red", [ "v-18.9", "h-182.4", "v144" ] ],
+    [ "esp:GND.1", "bb1:bn.1", "black", [ "v-9.3", "h-163.3", "v9.6" ] ],
+    [ "bb1:bp.5", "r1:1", "green", [ "v0" ] ],
+    [ "r1:2", "dht1:VCC", "green", [ "h0" ] ],
+    [ "dht1:GND", "bb1:bn.2", "black", [ "v0" ] ],
+    [ "esp:D15", "dht1:SDA", "#8f4814", [ "v-18.9", "h76.6", "v134.4", "h-144", "v9.6" ] ],
+    [ "bb1:bp.11", "bmp1:VCC", "red", [ "v54.5", "h-6.8" ] ],
+    [ "bmp1:GND", "bb1:bn.12", "black", [ "v-38.4", "h9.79" ] ],
+    [ "bmp1:SCL", "esp:D22", "blue", [ "v-28.8", "h9.79", "v-220.8", "h48" ] ],
+    [ "bb1:bp.15", "bmp1:3.3V", "red", [ "v0" ] ],
+    [ "bmp1:SDA", "esp:D21", "gold", [ "v-115.2", "h48.19", "v-134.4", "h-163.2" ] ],
+    [ "esp:D34", "ldr1:AO", "gray", [ "v19.2", "h9.4" ] ],
+    [ "ldr1:VCC", "bb1:bp.47", "red", [ "v0" ] ],
+    [ "ldr1:GND", "bb1:bn.48", "black", [ "v0" ] ],
+    [ "oled1:GND", "bb1:bn.35", "black", [ "v0" ] ],
+    [ "oled1:VCC", "bb1:bp.36", "red", [ "v0" ] ],
+    [ "oled1:SDA", "esp:D21", "gold", [ "v-220.8", "h0.07" ] ],
+    [ "oled1:SCL", "esp:D22", "blue", [ "v-230.4", "h-412.5" ] ]
+  ],
+  "dependencies": {}
+}
