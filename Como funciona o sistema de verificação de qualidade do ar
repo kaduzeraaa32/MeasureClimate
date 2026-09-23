@@ -1,0 +1,9 @@
+## Sistema de Verificação da Qualidade do Ar
+
+O sistema utiliza sensores para medir a qualidade do ar em diferentes locais,
+os sensores coletam informações sobre poluentes e partículas presentes no ambiente.
+Esses dados são enviados para o sistema para serem analisados.
+Após a análise, a qualidade do ar é classificada em níveis, como boa, moderada ou ruim.
+Quando os níveis de poluição estão altos, o sistema pode emitir um alerta.
+As informações podem ser exibidas em um site ou aplicativo de forma simples.
+Assim, as pessoas conseguem acompanhar a qualidade do ar em tempo real.
